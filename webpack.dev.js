@@ -5,7 +5,8 @@ module.exports = merge(common, {
   mode: 'development',
   devServer: {
     open: true,
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true, // これがないとルーティングできない
   },
-  devtool: 'eval-source-map'
+  devtool: 'eval-source-map' // original source (圧縮などはされない dev向け)
 })
