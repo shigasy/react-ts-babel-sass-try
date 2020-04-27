@@ -7,7 +7,7 @@
       "dom"
     ],
     "sourceMap": true,                     /* trueにしないと、TypeScriptによって生成されたjsファイルのSourceMapしか見れなくなる */
-    // "jsx": "react",                     /* reactを書くときに必要, 'react-native', or 'react'. */
+    "jsx": "react",                     /* reactを書くときに必要, 'react-native', or 'react'. */
     // "outFile": "./",                    /* 出力するファイル(ファイル出力はwebpackで行うので不要) */
     // "outDir": "./",                     /* 出力するディレクトリ(ファイル出力はwebpackで行うので不要) */
     // "rootDir": "./",                    /* ビルド時のルートディレクトリ(ビルド対象のパス設定はwebpackで行うので不要) */

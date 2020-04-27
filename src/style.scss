@@ -1,8 +1,9 @@
 .text {
-  display: flex;
+  display: flex; /* prefix test */
   color: #495057;
   font-size: 20px;
   &__link {
+    /* scss test */
     color: #1c7cd6;
   }
 }
