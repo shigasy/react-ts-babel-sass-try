@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES5",                        /* ESNEXTとした場合、Optional ChainingをBabelが読み込めなかったため、ES5に */
+    "target": "es5",                        /* ESNEXTとした場合、Optional ChainingをBabelが読み込めなかったため、ES5に */
     "module": "ESNext",
     "lib": [
       "ESNext",
       "dom"
     ],
-    // "jsx": "preserve",                     /* reactを書くときに必要, 'react-native', or 'react'. */
+    "sourceMap": true,                     /* trueにしないと、TypeScriptによって生成されたjsファイルのSourceMapしか見れなくなる */
+    // "jsx": "react",                     /* reactを書くときに必要, 'react-native', or 'react'. */
     // "outFile": "./",                    /* 出力するファイル(ファイル出力はwebpackで行うので不要) */
     // "outDir": "./",                     /* 出力するディレクトリ(ファイル出力はwebpackで行うので不要) */
     // "rootDir": "./",                    /* ビルド時のルートディレクトリ(ビルド対象のパス設定はwebpackで行うので不要) */
@@ -20,6 +21,8 @@
     "noUnusedParameters": true,            /* 未使用のパタメーターを許容しない */
     "noImplicitReturns": true,             /* メソッド内で返り値の型があっているかをチェック */
     "noFallthroughCasesInSwitch": true,          /* caseのフォールスルーをエラー報告します */
+    "allowJs": true,                     /* これがないと、css-loaderが読み込めなかった */
+
 
     /* Module Resolution Options */
     "esModuleInterop": true                /* ESModuleと同じ動作をする. */

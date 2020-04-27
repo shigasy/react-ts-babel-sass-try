@@ -1,4 +1,5 @@
-import { hoge, test } from "index";
+import { hoge, test } from "./module";
+import './style.scss'
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 (async () => {
   console.log("start");
