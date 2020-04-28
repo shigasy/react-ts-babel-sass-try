@@ -25,3 +25,25 @@
    2. `package.json`に`['> 1%', 'last 2 versions']`を指定
 7. HTMLもTemplateを読み込んで自動生成したいので、`html-webpack-plugin`をインストール。
 8. Reactを入れたいので`react react-dom @types/react @types/react-dom @babel/preset-react`をインストール
+
+
+## polyfillの確認
+
+webpack devで生成したbundle.jsにcore-jsが含まれている様子
+
+![](webpack-dev.png)
+
+---
+多くのブラウザにPolyfillで対応するとファイルサイズが大きくなっていることがわかる。
+\ |  `>20%`  |  `> 1% last 2 versions`  |
+| ---| ---- | ---- |
+| bundle.jsのサイズ(Reactなし) |  2.58 KiB  |  31.9 KiB  |
+
+---
+prefixの場合も同様である。
+\ |  `指定なし(prefixなし)`  |  `> 1% last 2 versions`  |
+| ---| ---- | ---- |
+| app.cssのサイズ(Reactなし) |  175 bytes    | 223 bytes
+
+
+`babel.config.js`ではうまく動かず、`.babelrc`だとpolyfillが効いた
